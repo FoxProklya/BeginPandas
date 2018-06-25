@@ -5,9 +5,9 @@ k1 = 5
 k2 = 8
 k3 = k2*k1
 df = pd.DataFrame({
-    'qwerty' : [k1,  '0', '0',  4, 'w'],
-    'asdfgh' : ['1', '1', '1',  5, 'w'],
-    'zxcvbn' : [k3,  '2',  k2,  6, 'w'],
+    'qwerty' : [k1,  0, 0,  4,   3],
+    'asdfgh' : [1, 1, 1,  5,   3],
+    'zxcvbn' : [k3,  2,  k2,  6,   3],
     '1'      : [1,    2,    3,  7,  9 ],
     '2'      : [10,  11,   12, 13,  14]
 }, index = ['Q1', 'Q2', k3, '9', 98])
@@ -37,6 +37,12 @@ print('')
 print(df)
 
 del df['1']
+
+print('')
+
+print(df)
+
+df.loc['Q4'] = df.loc['Q1'] * df.loc['Q2']
 
 print('')
 

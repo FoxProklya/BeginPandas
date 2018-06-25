@@ -3,14 +3,14 @@ import pandas as pd
 import seaborn as sns
 k1 = 5
 k2 = 8
-k3 = k2*k1
+k3 = k2*k1-99
 df = pd.DataFrame({
     'qwerty' : [k1,  0, 0,  4,   3],
     'asdfgh' : [1, 1, 1,  5,   3],
     'zxcvbn' : [k3,  2,  k2,  6,   3],
     '1'      : [1,    2,    3,  7,  9 ],
     '2'      : [10,  11,   12, 13,  14]
-}, index = ['Q1', 'Q2', k3, '9', 98])
+}, index = ['Q1', 'Q2', k3, '9', '98'])
 
 print(df)
 
@@ -42,7 +42,7 @@ print('')
 
 print(df)
 
-df.loc['Q4'] = df.loc['Q1'] * df.loc['Q2']
+df.loc['Q4'] = (df.loc['Q1'] * df.loc['98'] / (df.loc[k3] + 22)) - df.loc['9']
 
 print('')
 

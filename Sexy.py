@@ -3,7 +3,7 @@ import pandas as pd
 import seaborn as sns
 import xlsxwriter
 
-k1 = 5
+k1 = int(input('Введите число: '))
 k2 = 8
 k3 = k2*k1-99
 df = pd.DataFrame({

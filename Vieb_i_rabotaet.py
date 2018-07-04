@@ -9,7 +9,7 @@ from sqlalchemy   import create_engine
 #________________________________
 
 #Подключение к SQL
-engine = create_engine('postgresql://artur:2011Milki532678@endiny.me:5432/artur_test',echo=False)
+engine = create_engine()
 #________________________________
 
 #введение колличество строк для заполнения базы

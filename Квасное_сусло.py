@@ -93,3 +93,23 @@ engine.commit()
 
 #CLOSE
 engine.close()
+
+#EXCEL
+
+writer = pd.ExcelWriter('test.xlsx', engine='xlsxwriter')
+
+# Convert the dataframe to an XlsxWriter Excel object.
+
+#BASE OLD
+data.to_excel(writer, sheet_name='OldBase')
+
+#NEW ROW
+df.to_excel(writer, sheet_name='NewRow')
+
+
+#full BASE
+data1.to_excel(writer, sheet_name='FullBase')
+
+
+# Close the Pandas Excel writer and output the Excel file.
+writer.save()

@@ -86,3 +86,10 @@ print(results)
 #Проверка базы после махинаций
 data1 = pd.read_sql('SELECT * FROM test', engine)
 print(data1)
+
+
+#SAVE
+engine.commit()
+
+#CLOSE
+engine.close()
